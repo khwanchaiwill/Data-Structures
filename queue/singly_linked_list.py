@@ -42,7 +42,7 @@ class LinkedList:
         if not self.head:
             return None
         # if head has no next, then we have a single element in our list
-        if  self.head is self.tail:
+        if not self.head.get_next():
             # get a reference to the head
             head = self.head
             # delete the list's head reference
@@ -117,11 +117,3 @@ class LinkedList:
     #         # update the current node to the next node in the list
     #         current = current.get_next()
     #     return max_value
-
-
-
-# ll = Node(1)
-# ll.set_next(Node(2))   
-# ll.next.set_next(Node(3))
-# ll.next.next.set_next(Node(4))
-# ll.next.next.next.set_next(Node(5))
